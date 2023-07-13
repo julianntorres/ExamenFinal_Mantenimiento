@@ -1,6 +1,9 @@
 import java.util.Arrays;
+import java.util.logging.Logger;
 
 public class Main {
+
+  private static final Logger logger = Logger.getLogger(Main.class.getName());
 
   public static void main(String[] args) {
     String expected = "Rental Record for C. U. Stomer\n\tYou've Got Mail\t3.5\n\tMatrix\t2.0\nAmount owed is 5.5\nYou earned 2 frequent points\n";
@@ -11,6 +14,6 @@ public class Main {
       throw new AssertionError("Expected: " + System.lineSeparator() + String.format(expected) + System.lineSeparator() + System.lineSeparator() + "Got: " + System.lineSeparator() + result);
     }
 
-    System.out.println("Success");
+    logger.info("Success");
   }
 }
